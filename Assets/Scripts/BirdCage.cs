@@ -1,29 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
-
-public class Employee : MonoBehaviour,IInteractable
+public class BirdCage : MonoBehaviour, IInteractable
 {
-    private SpriteRenderer sr;
-    private Color originalColor;
 
-    public Sprite mail;
+    private SpriteRenderer sr;
+
+    private Color originalColor;
+    public Sprite bird;
 
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
     }
-
     public void Interact(Transform interactorTransform)
     {
         ManagerCarry managerCarry = interactorTransform.GetComponent<ManagerCarry>();
-        
-        if (managerCarry != null && !managerCarry.isHandFull)
+        if (managerCarry != null && !managerCarry.isHeadFull)
         {
-            
-            managerCarry.PickUpItem("Mail", mail, CarrySlot.Hand);
+            managerCarry.PickUpItem("Bird", bird, CarrySlot.Head);
         }
     }
 
@@ -36,5 +34,4 @@ public class Employee : MonoBehaviour,IInteractable
     {
         sr.color = Color.red;
     }
-
 }

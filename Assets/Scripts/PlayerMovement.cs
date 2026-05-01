@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         }
         rb.velocity = new Vector2(moveHorizontal,moveVertical) * moveSpeed;
 
+        
 
         if (moveHorizontal != 0 || moveVertical != 0)
         {
