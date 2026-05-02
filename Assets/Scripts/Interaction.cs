@@ -4,20 +4,37 @@ using UnityEngine;
 
 
 public interface IInteractable{
+    InteractGroup Group { get; }
+
     void Interact(Transform interactorTransform);
     void onTouchingPlayer();
     void onNotTouchingPlayer();
 
 }
+
+public enum InteractGroup{
+    Environment,
+    Work
+}
 public class Interaction : MonoBehaviour
 {
+    
     private IInteractable currentInteractable;
     void Update()
     {
-       
-        if(Input.GetButtonDown("Jump") && currentInteractable != null)
-        {
-            currentInteractable.Interact(transform);
+       if (currentInteractable != null){
+            if(Input.GetButtonDown("Jump"))
+            {
+                if (currentInteractable.Group == InteractGroup.Work){
+                    currentInteractable.Interact(transform);
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                if (currentInteractable.Group == InteractGroup.Environment){
+                    currentInteractable.Interact(transform);
+                }
+            }
         }
     }
 

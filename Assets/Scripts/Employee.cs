@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Employee : MonoBehaviour,IInteractable
 {
+    public InteractGroup Group => InteractGroup.Work;
     private SpriteRenderer sr;
     private Color originalColor;
 
@@ -23,7 +24,7 @@ public class Employee : MonoBehaviour,IInteractable
         if (managerCarry != null && !managerCarry.isHandFull)
         {
             
-            managerCarry.PickUpItem("Mail", mail, CarrySlot.Hand);
+            managerCarry.PickUpItem("Post", mail, CarrySlot.Hand);
         }
     }
 

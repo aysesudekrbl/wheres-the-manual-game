@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Advertisements;
+
 
 public class BirdCage : MonoBehaviour, IInteractable
 {
-
+    public InteractGroup Group => InteractGroup.Work;
     private SpriteRenderer sr;
 
     private Color originalColor;

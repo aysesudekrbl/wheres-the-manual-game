@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossChair : MonoBehaviour,IInteractable
 {
+
+    public InteractGroup Group => InteractGroup.Environment;
     private Vector2 originalPlayerPosition;
     private bool sitting = false;
     private SpriteRenderer sr;
@@ -16,7 +18,7 @@ public class BossChair : MonoBehaviour,IInteractable
     }
     public void Interact(Transform interactorTransform)
     {
-        
+    
 
         if(interactorTransform.GetComponent<PlayerMovement>() != null)
             {
