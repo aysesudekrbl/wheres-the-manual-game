@@ -22,6 +22,7 @@ public class Employee : MonoBehaviour,IInteractable
     public bool needsHelp = false;
     public bool isManagerHere = false;
     private float fanWaitTime = 0f;
+    private float coffeeCount = 0;
     
     private ManagerCarry playerManager;
     
@@ -92,6 +93,17 @@ public class Employee : MonoBehaviour,IInteractable
                 currentTask = EmployeeTask.None;
                 computer.sprite = noTask;
                 needsHelp = false;
+            }
+        }
+
+        if (managerCarry != null && managerCarry.currentHandItem =="Coffee" && coffeeCount < 3)
+        {
+            // burda bişi daha olacak
+            coffeeCount += 1;
+            managerCarry.DropItem(CarrySlot.Hand);
+            if (coffeeCount >= 3)
+            {
+                Debug.Log("Çarpıntı!!!");
             }
         }
     }

@@ -28,6 +28,7 @@ public class Interaction : MonoBehaviour
                 if (currentInteractable.Group == InteractGroup.Work){
                     currentInteractable.Interact(transform);
                 }
+                
             }
             if (Input.GetKeyDown(KeyCode.Return))
             {

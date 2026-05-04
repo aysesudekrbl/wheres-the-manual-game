@@ -2,29 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManagerPhone : MonoBehaviour,IInteractable
+public class CoffeeMachine : MonoBehaviour,IInteractable
 {
+
+    public Sprite coffee;
     private SpriteRenderer sr;
     private Color originalColor;
-
-    public Sprite ringing;
-    public Sprite notRinging;
-    public bool ManagerPhoneRinging = false;
-    public InteractGroup Group => InteractGroup.Work;
-
+    public InteractGroup Group => InteractGroup.Environment;
 
     public void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
     }
+
     public void Interact(Transform interactorTransform)
     {
-        PhoneController managerPhone = GetComponent<PhoneController>();
+        ManagerCarry managerCarry = interactorTransform.GetComponent<ManagerCarry>();
         
-        if (managerPhone.isRinging == true)
+        if (managerCarry != null && !managerCarry.isHandFull)
         {
-            managerPhone.Pickup();
+            managerCarry.PickUpItem("Coffee", coffee, CarrySlot.Hand);
         }
     }
 
