@@ -30,7 +30,8 @@ public class Employee : MonoBehaviour,IInteractable
     {
         None,
         Mail,
-        Overheat
+        Overheat,
+        Printer
     }
 
     public EmployeeTask currentTask = EmployeeTask.None;
@@ -56,7 +57,7 @@ public class Employee : MonoBehaviour,IInteractable
 
     public void GenerateRandomTask()
     {
-        int randomnumber = Random.Range(1,3);
+        int randomnumber = Random.Range(3,4);
         currentTask = (EmployeeTask)randomnumber;
         needsHelp = true;
 
@@ -69,6 +70,11 @@ public class Employee : MonoBehaviour,IInteractable
         case EmployeeTask.Overheat:
             computer.sprite = overheatTask;
             break;
+        
+        case EmployeeTask.Printer:
+            GetComponent<EmployeePathFinder>().GoToQueue();
+            break;
+
 
     }
     }
