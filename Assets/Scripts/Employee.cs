@@ -25,6 +25,11 @@ public class Employee : MonoBehaviour,IInteractable
     private float coffeeCount = 0;
     
     private ManagerCarry playerManager;
+
+    //Animation
+
+    private Pathfinding.AIPath aiPath;
+    private Animator anim;
     
     public enum EmployeeTask
     {
@@ -86,6 +91,9 @@ public class Employee : MonoBehaviour,IInteractable
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
         playerManager = FindObjectOfType<ManagerCarry>();
+
+        aiPath = GetComponent<Pathfinding.AIPath>();
+        anim = GetComponent<Animator>();
     }
 
     public void Interact(Transform interactorTransform)
@@ -116,7 +124,10 @@ public class Employee : MonoBehaviour,IInteractable
 
     public void Update()
     {
-        
+        sr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100f);
+        anim.SetFloat("Speed", aiPath.velocity.magnitude);
+        sr.flipX = aiPath.velocity.x < 0;
+
         if (isManagerHere && currentTask == EmployeeTask.Overheat && playerManager.currentHeadtem == "Fan")
         {
             fanWaitTime += Time.deltaTime;

@@ -1,0 +1,83 @@
+[33mcommit 05c5ce0f0fd06ee6c6451972b5932acad4e191e9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Tue May 5 23:40:27 2026 +0300
+
+    wip: Yazıcı görevi employeelere eklendi, kuyruk sistemi üzerine çalışılmaya başlandı
+
+[33mcommit cd576d08a6c72d20de0d8f202f94a33bdc7d7ed5[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Tue May 5 19:09:03 2026 +0300
+
+    feat: A* pathfinding eklendi, 2D navigasyon düzeltildi
+
+[33mcommit 38cf81d4a6e615677a02f499aa415c4403b71aec[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Mon May 4 18:29:03 2026 +0300
+
+    feat: Telefon etkileşimi tamamlandı ve çalışanlar için kahve sayacı eklendi
+
+[33mcommit 49dbeaf34654b69730f86b27b3b00369e9adca53[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Sun May 3 20:09:34 2026 +0300
+
+    feat: ana menü, ayarlar ve oyun sahneleri arası navigasyon sistemi eklendi
+
+[33mcommit 4bdccb949b62321a7ea97940b67cd8006160adf0[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Sun May 3 10:58:46 2026 +0300
+
+    feat: gün döngüsü (saat) eklendi
+
+[33mcommit eae31c49b7cd1e0e9a5d05ffb120002bd300ac74[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Sat May 2 18:06:44 2026 +0300
+
+    feat: çalışan görev mekanikleri eklendi ve proje adı güncellendi
+    
+    - Çalışanlar için rastgele görev üreten zamanlayıcı (Coroutine) eklendi.
+    
+    - Mail (tuşla etkileşim) ve Overheat (3 saniye bekleme) görev sistemleri kuruldu.
+    
+    - Görev çakışmalarını önlemek için 'needsHelp' şalteri sisteme entegre edildi.
+    
+    - Optimizasyon için ManagerCarry referansı Employee içine Awake ile tanıtıldı.
+    
+    - Proje ana klasörü ve Unity Product Name 'Where's the Manual?' olarak güncellendi.
+
+[33mcommit d5254972e9ba1042078c7cd1e40fe967bfe10f07[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Sat May 2 13:01:43 2026 +0300
+
+    refactor: etkileşim sistemi environment ve work olarak ayrıldı
+    'IInteractable' arayüzüne 'Group' property zorunluluğu getirildi
+    'Interaction.cs' gruplara ayrı tulş ataması yapacak şekilde güncellendi
+       *Space tuşu Work etkileşimi
+       *Enter tuşu Environment etkileşimi
+    'Window' ve 'Employee' scriptlerine ait oldukları gruplar tanımlandı
+
+[33mcommit 69430dd08a7dc07987899f9c45078554278ef7ea[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Sat May 2 01:33:46 2026 +0300
+
+    feat: görsel eşya taşıma sistemi ve çoklu slot mekaniği eklendi
+    -ManagerCarry scripti ile Hand ve Head olmak üzere enum tabanlı eşya taşıma mimarisi kuruldu
+    -Employee ile etkileşime geçildiğinde eşyanın görselliğiyle birlikte oyuncuya geçmesi sağlandı
+    Taşınan eşyaların manager spriteının altında kalmaması için sortingorder ayarlandı
+
+[33mcommit b5dc32aa070603003f5c6391819b4a226acda084[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Fri May 1 20:58:49 2026 +0300
+
+    feat: temel etkileşim sistemi ve test objeleri eklendi
+    
+    - IInteractable arayüzü ve Interaction kontrolcüsü sıfırdan yazıldı
+    
+    - Çarpışma (trigger) algılamasını ve kod mantığını test etmek için placeholder çalışan objeleri eklendi.
+    
+    - Konum hafızası, fizik dondurma ve hareket kilitleme özelliklerini barındıran, otur/kalk state yönetimine sahip tam işlevsel bir BossChair eklendi.
+
+[33mcommit 551606bc255c0f05edd0b412da7752c185959417[m
+Author: aysesudekrbl <karabalayssee@gmail.com>
+Date:   Fri May 1 02:58:54 2026 +0300
+
+    (feat) karakter kontrolcüsü ve interior tilemap collision sistemi eklendi
