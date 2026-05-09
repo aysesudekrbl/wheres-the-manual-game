@@ -14,6 +14,11 @@ public class EmployeePathFinder : MonoBehaviour
     void Awake()
     {
         aiDestinationSetter = GetComponent<AIDestinationSetter>();
+
+        if (queueSystem == null)
+        {
+            queueSystem = FindObjectOfType<QueueSystem>(); 
+        }
     }
 
     

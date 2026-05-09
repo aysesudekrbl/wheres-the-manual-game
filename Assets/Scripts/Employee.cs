@@ -124,7 +124,7 @@ public class Employee : MonoBehaviour,IInteractable
 
     public void Update()
     {
-        sr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100f);
+        
         anim.SetFloat("Speed", aiPath.velocity.magnitude);
         sr.flipX = aiPath.velocity.x < 0;
 
