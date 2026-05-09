@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 2812096671733387643}
   - component: {fileID: 5622399728265171296}
   - component: {fileID: 1113162385810212374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Employee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,8 +318,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011831284, y: 0.3510154}
-  m_Size: {x: 0.39000702, y: 0.7470907}
+  m_Offset: {x: -0.013648748, y: 0.34010914}
+  m_Size: {x: 0.66993475, y: 0.9070489}
   m_Direction: 0
 --- !u!114 &5622399728265171296
 MonoBehaviour:
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  uniqueID: 798440330693079261
+  uniqueID: 5583475515497127473
   points: []
   convex: 1
   minBoundsHeight: 1

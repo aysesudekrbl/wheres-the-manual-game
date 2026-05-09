@@ -6,14 +6,18 @@ public class EmployeePathFinder : MonoBehaviour
 {
     public QueueSystem queueSystem; 
     private AIDestinationSetter aiDestinationSetter;
+    private PrinterController printer;
     
+    public bool headingToDesk = false;
     public Transform ownDesk;
     private int myCurrentIndex = -1; 
     private bool isWaitingAtFront = false; 
+    
 
     void Awake()
     {
         aiDestinationSetter = GetComponent<AIDestinationSetter>();
+        printer = FindObjectOfType<PrinterController>();
 
         if (queueSystem == null)
         {
@@ -23,7 +27,9 @@ public class EmployeePathFinder : MonoBehaviour
 
     
     public void GoToQueue()
+    
     {
+        
         queueSystem.JoinQueue(this);
     }
 
@@ -48,19 +54,34 @@ public class EmployeePathFinder : MonoBehaviour
             yield return null;
         }
 
+        while (printer.outOfInk)
+        {
+            yield return null; 
+        }
+
         float randomWait = Random.Range(2f, 5f);
         yield return new WaitForSeconds(randomWait);
-
+        
         FinishTask();
+        
     }
 
     public void FinishTask()
     {
         isWaitingAtFront = false;
+
+        PrinterController printer = queueSystem.GetComponent<PrinterController>();
+        if (printer != null)
+        {
+            printer.OnEmployeeFinished();
+        }
+
+
         queueSystem.LeaveQueue(this);
         if (ownDesk != null)
         {
             aiDestinationSetter.target = ownDesk;
+            headingToDesk = true;
             GetComponent<Employee>(). needsHelp = false;
         }
     }

@@ -62,7 +62,7 @@ public class Employee : MonoBehaviour,IInteractable
 
     public void GenerateRandomTask()
     {
-        int randomnumber = Random.Range(3,4);
+        int randomnumber = Random.Range(1,4);
         currentTask = (EmployeeTask)randomnumber;
         needsHelp = true;
 

@@ -7,7 +7,7 @@ public class QueueSystem : MonoBehaviour
     public Transform[] queueSpots; 
     
     
-    private List<EmployeePathFinder> currentQueue = new List<EmployeePathFinder>();
+    public List<EmployeePathFinder> currentQueue = new List<EmployeePathFinder>();
 
   
     public void JoinQueue(EmployeePathFinder employee)
