@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   queueSystem: {fileID: 0}
+  headingToDesk: 0
   ownDesk: {fileID: 0}
 --- !u!114 &2548675176925971862
 MonoBehaviour:
@@ -318,8 +319,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013648748, y: 0.34010914}
-  m_Size: {x: 0.66993475, y: 0.9070489}
+  m_Offset: {x: -0.019099236, y: 0.33648002}
+  m_Size: {x: 0.8406, y: 1.1022346}
   m_Direction: 0
 --- !u!114 &5622399728265171296
 MonoBehaviour:
@@ -334,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  uniqueID: 5583475515497127473
+  uniqueID: 4554565483162392672
   points: []
   convex: 1
   minBoundsHeight: 1

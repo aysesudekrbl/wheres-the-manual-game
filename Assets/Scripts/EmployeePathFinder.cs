@@ -7,7 +7,8 @@ public class EmployeePathFinder : MonoBehaviour
     public QueueSystem queueSystem; 
     private AIDestinationSetter aiDestinationSetter;
     
-    
+    private Animator anim;
+
     public bool headingToDesk = false;
     public Transform ownDesk;
     private int myCurrentIndex = -1; 
@@ -17,7 +18,7 @@ public class EmployeePathFinder : MonoBehaviour
     void Awake()
     {
         aiDestinationSetter = GetComponent<AIDestinationSetter>();
-       
+        anim = GetComponent<Animator>();
 
         if (queueSystem == null)
         {
@@ -54,14 +55,19 @@ public class EmployeePathFinder : MonoBehaviour
             yield return null;
         }
 
+        
+
         IWorkStation station = queueSystem.GetComponent<IWorkStation>();
         if (station != null)
         {
+            if (station.IsBroken) anim.SetBool("Waiting", true);
+
             while (station.IsBroken)
             {
                 yield return null; 
             }
-            yield return new WaitForSeconds(station.WorkDuration); // Makinenin süresi kadar bekle
+            anim.SetBool("Waiting", false);
+            yield return new WaitForSeconds(station.WorkDuration); 
         }
         
         FinishTask();
