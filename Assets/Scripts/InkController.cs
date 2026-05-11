@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrinterController : MonoBehaviour, IInteractable
+public class PrinterController : MonoBehaviour, IInteractable,IWorkStation
 {
     public float inkTime = 15f;
     private float waitTime;
@@ -14,6 +14,9 @@ public class PrinterController : MonoBehaviour, IInteractable
     
     public InteractGroup Group => InteractGroup.Work;
 
+    public bool IsBroken => outOfInk;
+
+    public float WorkDuration => Random.Range(3f,8f);
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -52,7 +55,7 @@ public class PrinterController : MonoBehaviour, IInteractable
     
     public void SetInkTimer()
     {
-        waitTime = Random.Range(3f, 8f); 
+        waitTime = Random.Range(10f, 40f); 
     }
 
     public void Interact(Transform interactorTransform)
