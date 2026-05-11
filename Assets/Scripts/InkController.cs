@@ -57,7 +57,17 @@ public class PrinterController : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        if (outOfInk) NotNeedingInk();
+        ManagerCarry managerCarry = interactorTransform.GetComponent<ManagerCarry>();
+        
+        if (managerCarry != null && managerCarry.isHandFull && outOfInk)
+        {
+            if (managerCarry.currentHandItem == "Ink"){
+                managerCarry.DropItem(CarrySlot.Hand);
+                
+                NotNeedingInk();
+            }
+        }
+
     }
 
     public void onTouchingPlayer() { sr.color = Color.red; }

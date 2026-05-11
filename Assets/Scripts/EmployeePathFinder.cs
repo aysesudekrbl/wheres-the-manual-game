@@ -63,7 +63,7 @@ public class EmployeePathFinder : MonoBehaviour
         yield return new WaitForSeconds(randomWait);
         
         FinishTask();
-        
+   
     }
 
     public void FinishTask()
@@ -82,7 +82,20 @@ public class EmployeePathFinder : MonoBehaviour
         {
             aiDestinationSetter.target = ownDesk;
             headingToDesk = true;
-            GetComponent<Employee>(). needsHelp = false;
+
+            StartCoroutine(ReturnToDeskRoutine());
         }
+    }
+
+
+    private IEnumerator ReturnToDeskRoutine()
+    {
+        while (Vector3.Distance(transform.position, ownDesk.position) > 0.5f)
+        {
+            yield return null;
+        }
+
+        headingToDesk = false;
+        GetComponent<Employee>().needsHelp = false;
     }
 }
