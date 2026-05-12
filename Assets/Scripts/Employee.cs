@@ -24,6 +24,8 @@ public class Employee : MonoBehaviour,IInteractable
     private float fanWaitTime = 0f;
     private float coffeeCount = 0;
     
+    public QueueSystem printerQueue;
+    public QueueSystem bossQueue;
     private ManagerCarry playerManager;
 
     //Animation
@@ -36,11 +38,26 @@ public class Employee : MonoBehaviour,IInteractable
         None,
         Mail,
         Overheat,
-        Printer
+        Printer,
+        BossDuty
     }
 
     public EmployeeTask currentTask = EmployeeTask.None;
 
+     private void Awake()
+    {
+
+        printerQueue = GameObject.Find("Printer").GetComponent<QueueSystem>();
+        bossQueue = GameObject.Find("BossChair").GetComponent<QueueSystem>();
+        
+        sr = GetComponent<SpriteRenderer>();
+        originalColor = sr.color;
+        playerManager = FindObjectOfType<ManagerCarry>();
+
+        aiPath = GetComponent<Pathfinding.AIPath>();
+        anim = GetComponent<Animator>();
+    }
+     
     private void Start()
     {
     StartCoroutine(RandomTaskRoutine());
@@ -62,7 +79,7 @@ public class Employee : MonoBehaviour,IInteractable
 
     public void GenerateRandomTask()
     {
-        int randomnumber = Random.Range(1,4);
+        int randomnumber = Random.Range(1,5);
         currentTask = (EmployeeTask)randomnumber;
         needsHelp = true;
 
@@ -77,24 +94,16 @@ public class Employee : MonoBehaviour,IInteractable
             break;
         
         case EmployeeTask.Printer:
-            GetComponent<EmployeePathFinder>().GoToQueue();
+            GetComponent<EmployeePathFinder>().GoToQueue(printerQueue);
             break;
 
-
+        case EmployeeTask.BossDuty:
+           GetComponent<EmployeePathFinder>().GoToQueue(bossQueue);
+            break;
     }
     }
 
-    
 
-    private void Awake()
-    {
-        sr = GetComponent<SpriteRenderer>();
-        originalColor = sr.color;
-        playerManager = FindObjectOfType<ManagerCarry>();
-
-        aiPath = GetComponent<Pathfinding.AIPath>();
-        anim = GetComponent<Animator>();
-    }
 
     public void Interact(Transform interactorTransform)
     {

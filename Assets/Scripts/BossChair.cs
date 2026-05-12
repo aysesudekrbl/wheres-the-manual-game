@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossChair : MonoBehaviour,IInteractable
+public class BossChair : MonoBehaviour,IInteractable,IWorkStation
 {
 
     public InteractGroup Group => InteractGroup.Environment;
+
+    public bool IsBroken => !sitting;
+
+    public float WorkDuration => Random.Range(3f,8f);
+
     private Vector2 originalPlayerPosition;
     private bool sitting = false;
     private SpriteRenderer sr;
@@ -19,7 +24,6 @@ public class BossChair : MonoBehaviour,IInteractable
     public void Interact(Transform interactorTransform)
     {
     
-
         if(interactorTransform.GetComponent<PlayerMovement>() != null)
             {
                 if (!sitting){
@@ -67,5 +71,10 @@ public class BossChair : MonoBehaviour,IInteractable
         {
             sr.color = originalColor;
         }
+    }
+
+    public void OnEmployeeFinished()
+    {
+        
     }
 }

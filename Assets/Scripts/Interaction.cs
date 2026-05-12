@@ -34,12 +34,13 @@ public class Interaction : MonoBehaviour
             {
                 if (currentInteractable.Group == InteractGroup.Environment){
                     currentInteractable.Interact(transform);
+                    
                 }
             }
         }
     }
 
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IInteractable interactable = collision.GetComponent<IInteractable>();
@@ -54,12 +55,16 @@ public class Interaction : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         IInteractable interactable = collision.GetComponent<IInteractable>();
-        if (interactable != null && interactable == currentInteractable)
+        if (interactable != null) 
         {
-            currentInteractable.onNotTouchingPlayer();
-            currentInteractable = null;
+            interactable.onNotTouchingPlayer(); 
+            if (interactable == currentInteractable) 
+            {
+                currentInteractable = null;
+            }
         }
-        
     }
+
+    
 }
 

@@ -115,6 +115,8 @@ MonoBehaviour:
   noTask: {fileID: 1730723712, guid: 60a3df371f090604982fe1220dd0efd3, type: 3}
   needsHelp: 0
   isManagerHere: 0
+  printerQueue: {fileID: 0}
+  bossQueue: {fileID: 0}
   currentTask: 0
 --- !u!50 &821494772886717576
 Rigidbody2D:
@@ -335,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  uniqueID: 4554565483162392672
+  uniqueID: 8767067072434874760
   points: []
   convex: 1
   minBoundsHeight: 1
