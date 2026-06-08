@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = scale;
  
         }
-        rb.velocity = new Vector2(moveHorizontal,moveVertical) * moveSpeed;
+        rb.linearVelocity = new Vector2(moveHorizontal,moveVertical) * moveSpeed;
 
         
 

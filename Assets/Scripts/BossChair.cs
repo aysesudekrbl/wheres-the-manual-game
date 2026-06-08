@@ -30,7 +30,7 @@ public class BossChair : MonoBehaviour,IInteractable,IWorkStation
                     Rigidbody2D rb = interactorTransform.GetComponent<Rigidbody2D>();
                         if (rb != null)
                         {
-                            rb.velocity = Vector2.zero;
+                            rb.linearVelocity = Vector2.zero;
                         }
 
                     Animator anim = interactorTransform.GetComponent<Animator>();

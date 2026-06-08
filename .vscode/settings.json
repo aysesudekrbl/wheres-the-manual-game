@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "WheresTheManual.sln"
+    "dotnet.defaultSolution": "wheres-the-manual-game.slnx"
 }
