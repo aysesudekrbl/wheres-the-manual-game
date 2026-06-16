@@ -9,6 +9,11 @@ public enum CarrySlot
 }
 public class ManagerCarry : MonoBehaviour
 {
+
+    private float fanCooldown;
+    private float birdCooldown;
+    
+    
    [Header("Hand Bölmesi")]
    public SpriteRenderer handDisplay;
    public bool isHandFull = false;
@@ -41,22 +46,51 @@ public void PickUpItem(string itemName, Sprite itemSprite, CarrySlot slot)
         }
 }
 
-        public void DropItem(CarrySlot slot)
+public void DropItem(CarrySlot slot)
+{
+    if (slot == CarrySlot.Hand)
     {
-        if (slot == CarrySlot.Hand)
-        {
-            isHandFull = false;
-            currentHandItem = "";
-            handDisplay.sprite = null;
-            handDisplay.enabled = false;
-        }
+        isHandFull = false;
+        currentHandItem = "";
+        handDisplay.sprite = null;
+        handDisplay.enabled = false;
+    }
 
-        if(slot == CarrySlot.Head)
+    if (slot == CarrySlot.Head)
+    {
+        isHeadFull = false;
+        currentHeadtem = "";
+        headDisplay.sprite = null;
+        headDisplay.enabled = false;
+    }
+    
+}
+
+public void Update()
+{
+    if (isHeadFull && currentHeadtem == "Fan")
+    {
+        
+        fanCooldown -= Time.deltaTime;
+        if (fanCooldown <= 0f)
         {
-            isHeadFull = false;
-            currentHeadtem = "";
-            headDisplay.sprite = null;
-            headDisplay.enabled = false;
+            DayStats.instance.VantOnHeadCounter();
+            fanCooldown = 1f;
         }
     }
+    else { fanCooldown = 0f; }
+    
+    
+    if (isHeadFull && currentHeadtem == "Bird")
+    {
+        birdCooldown -= Time.deltaTime;
+        if (birdCooldown <= 0f)
+        {
+            DayStats.instance.BirdOnHeadSeconds();
+            birdCooldown = 1f;
+        }
     }
+    else { birdCooldown = 0f; }
+    }
+
+}

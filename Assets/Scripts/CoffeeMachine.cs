@@ -23,6 +23,7 @@ public class CoffeeMachine : MonoBehaviour,IInteractable
         if (managerCarry != null && !managerCarry.isHandFull)
         {
             managerCarry.PickUpItem("Coffee", coffee, CarrySlot.Hand);
+            DayStats.instance.IncreaseCoffeeCount();
         }
     }
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -28,6 +27,8 @@ public class Employee : MonoBehaviour,IInteractable
     public QueueSystem bossQueue;
     private ManagerCarry playerManager;
 
+    private float sleepCooldown = 0f;
+    private float angerCooldown = 0f;
     //Animation
 
     private Pathfinding.AIPath aiPath;
@@ -52,7 +53,7 @@ public class Employee : MonoBehaviour,IInteractable
         
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
-        playerManager = FindObjectOfType<ManagerCarry>();
+        playerManager = FindFirstObjectByType<ManagerCarry>();
 
         aiPath = GetComponent<Pathfinding.AIPath>();
         anim = GetComponent<Animator>();
@@ -113,6 +114,7 @@ public class Employee : MonoBehaviour,IInteractable
         {
             if (currentTask == EmployeeTask.Mail){
                 managerCarry.PickUpItem("Post", mail, CarrySlot.Hand);
+                DayStats.instance.IncreaseMailCount();
                 currentTask = EmployeeTask.None;
                 computer.sprite = noTask;
                 needsHelp = false;
@@ -152,6 +154,29 @@ public class Employee : MonoBehaviour,IInteractable
         {
             fanWaitTime = 0f;
         }
+        
+        if (needsHelp && !anim.GetBool("Waiting"))
+        {
+            sleepCooldown -= Time.deltaTime;
+            if (sleepCooldown <= 0f)
+            {
+                DayStats.instance.EmployeesSleepingCounter();
+                sleepCooldown = 1f;
+            }
+        }
+        else { sleepCooldown = 0f; }
+
+        if (needsHelp && anim.GetBool("Waiting"))
+        {
+            angerCooldown -= Time.deltaTime;
+            if (angerCooldown <= 0f)
+            {
+                DayStats.instance.IncreaseEmployeeAngerSeconds();
+                angerCooldown = 1f;
+            }
+        }
+        else { angerCooldown = 0f; }
+        
     }
     public void onNotTouchingPlayer()
     {

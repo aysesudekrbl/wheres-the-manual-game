@@ -56,7 +56,11 @@ public class EmployeePathFinder : MonoBehaviour
         IWorkStation station = queueSystem.GetComponent<IWorkStation>();
         if (station != null)
         {
-            if (station.IsBroken) anim.SetBool("Waiting", true);
+            if (station.IsBroken)
+            {
+                DayStats.instance.IncreaseEmployeeAngerSeconds();
+                anim.SetBool("Waiting", true);
+            }
 
             while (station.IsBroken)
             {
@@ -74,7 +78,7 @@ public class EmployeePathFinder : MonoBehaviour
                 }
                 else 
                 {
-                    anim.SetBool("Waiting", true); 
+                    anim.SetBool("Waiting", true);
                 }
                 
                 yield return null; 

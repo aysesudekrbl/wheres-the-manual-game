@@ -44,6 +44,7 @@ public class PhoneController : MonoBehaviour
         isRinging = false;
         SetPhoneTimer();
         Debug.Log("Patron geldi");
+        DayStats.instance.AzarlanmaCounter();
         sr.sprite = notRinging;
     }
 
@@ -57,7 +58,7 @@ public class PhoneController : MonoBehaviour
 
     public void SetPhoneTimer()
     {
-        waitTime = Random.Range(1f,4f);
+        waitTime = Random.Range(5f,10f);
     }
 }
 

@@ -43,7 +43,9 @@ public class BossChair : MonoBehaviour,IInteractable,IWorkStation
                     interactorTransform.GetComponent<PlayerMovement>().enabled = false;
                     interactorTransform.position = transform.position;
                     sitting = true;
+                    DayStats.instance.IncreaseSitandstandupCount();
              }
+                
             
             else
             {

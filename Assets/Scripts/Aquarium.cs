@@ -23,6 +23,7 @@ public class Aquarium : MonoBehaviour,IInteractable
         if (managerCarry != null && !managerCarry.isHandFull)
         {
             managerCarry.PickUpItem("Ink", ink, CarrySlot.Hand);
+            DayStats.instance.IncreaseInkCount();
             
         }
     }
