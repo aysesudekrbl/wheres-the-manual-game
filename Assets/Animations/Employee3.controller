@@ -72,7 +72,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 487b15d1f28a2754797a540ff9b9d328, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2f34de48e06714fd0976bc501fcc214f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -221,7 +221,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EmployeeAnimation
+  m_Name: Employee3
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed
@@ -296,7 +296,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2bb2172033c470e4d8f6763ac8b75893, type: 2}
+  m_Motion: {fileID: 7400000, guid: 74b1e64d7c825433882405fcefa5699d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
