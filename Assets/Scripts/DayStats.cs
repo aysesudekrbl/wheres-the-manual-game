@@ -10,16 +10,16 @@ public class DayStats : MonoBehaviour
         instance = this; 
     }
     
-    private int stepCount = 0;
-    private int coffeeCount = 0;
-    private int inkCount = 0;
-    private int azarlanmaCount = 0;
-    private int birdOnHeadSeconds = 0;
-    private int vantOnHeadSeconds = 0;
-    private int employeesSleepingSeconds = 0;
-    private int sitandstandupCount = 0;
-    private int mailCount = 0;
-    private int employeeAngerSeconds = 0;
+    public int stepCount = 0;
+    public int coffeeCount = 0;
+    public int inkCount = 0;
+    public int azarlanmaCount = 0;
+    public int birdOnHeadSeconds = 0;
+    public int vantOnHeadSeconds = 0;
+    public int employeesSleepingSeconds = 0;
+    public int sitandstandupCount = 0;
+    public int mailCount = 0;
+    public int employeeAngerSeconds = 0;
     
     //1 saniye beklemesi için gerekli
     private IEnumerator WaitAndIncrease(System.Action action)

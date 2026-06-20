@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             if (!isCounting)
             {
                 isCounting = true;
-                InvokeRepeating("CountStep", 0.5f, 1f);
+                InvokeRepeating("CountStep", 0.2f, 0.025f);
             }
         }
         else

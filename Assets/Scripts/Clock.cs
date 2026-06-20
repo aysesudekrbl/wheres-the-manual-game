@@ -32,6 +32,7 @@ public class Clock : MonoBehaviour
             Time.timeScale = 0;
             _dayEnded = true;
             DayStats.instance.PrintStats(); 
+            NicknameSystem.instance.DebugPrintEndOfDay(DayStats.instance);
         }
         
         else{

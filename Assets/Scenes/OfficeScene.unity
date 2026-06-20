@@ -2762,6 +2762,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985e381e8dbe74af3acdf80b35b91db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayStats
+  stepCount: 0
+  coffeeCount: 0
+  inkCount: 0
+  azarlanmaCount: 0
+  birdOnHeadSeconds: 0
+  vantOnHeadSeconds: 0
+  employeesSleepingSeconds: 0
+  sitandstandupCount: 0
+  mailCount: 0
+  employeeAngerSeconds: 0
 --- !u!1 &623509928
 GameObject:
   m_ObjectHideFlags: 0
@@ -4556,6 +4566,51 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1270081014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270081016}
+  - component: {fileID: 1270081015}
+  m_Layer: 0
+  m_Name: NicknameSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1270081015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270081014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801f2233c888246c5938251014d5a72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NicknameSystem
+  data: {fileID: 11400000, guid: c27eb59d2d2e64fad9d4177ffd614be9, type: 2}
+--- !u!4 &1270081016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270081014}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.22, y: 5.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6363,6 +6418,7 @@ SceneRoots:
   - {fileID: 688526722}
   - {fileID: 3947129142223181663}
   - {fileID: 712670820}
+  - {fileID: 1270081016}
   - {fileID: 1438467169}
   - {fileID: 372442150}
   - {fileID: 571579355}
