@@ -46,7 +46,7 @@ public class DayStats : MonoBehaviour
     
     public void EmployeesSleepingCounter()
     {
-        StartCoroutine(WaitAndIncrease(() => employeesSleepingSeconds++));
+        StartCoroutine(WaitAndIncrease(() => employeesSleepingSeconds+= 1));
     }
     
   

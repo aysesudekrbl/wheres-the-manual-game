@@ -39,15 +39,15 @@ public class NicknameData : ScriptableObject
     public Dictionary<string, float> maxValues = new Dictionary<string, float>
     {
         { "stepCount",                6000f },
-        { "coffeeCount",              10f },
-        { "inkCount",                 10f },
-        { "azarlanmaCount",           10f },
-        { "birdOnHeadSeconds",        120f },
-        { "vantOnHeadSeconds",        120f },
+        { "coffeeCount",              6f },
+        { "inkCount",                 6f },
+        { "azarlanmaCount",           3f },
+        { "birdOnHeadSeconds",        50f },
+        { "vantOnHeadSeconds",        50f },
         { "employeesSleepingSeconds", 120f },
-        { "sitandstandupCount",       10f },
-        { "mailCount",                30f },
-        { "employeeAngerSeconds",     120f },
+        { "sitandstandupCount",       6f },
+        { "mailCount",                6f },
+        { "employeeAngerSeconds",     40f },
     };
 
     // 27 LAKAP TABLOSU

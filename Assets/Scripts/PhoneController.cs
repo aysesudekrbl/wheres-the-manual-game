@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PhoneController : MonoBehaviour
 {
-    public float ringingTime = 5f;
+    public float ringingTime = 15f;
     private float waitTime;
     public bool isRinging = false;
     public Sprite ringing;
@@ -58,7 +58,7 @@ public class PhoneController : MonoBehaviour
 
     public void SetPhoneTimer()
     {
-        waitTime = Random.Range(5f,10f);
+        waitTime = Random.Range(20f,50f);
     }
 }
 

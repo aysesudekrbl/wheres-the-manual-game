@@ -24,7 +24,7 @@ public class NicknameSystem : MonoBehaviour
         normalized["azarlanmaCount"] = stats.azarlanmaCount / data.maxValues["azarlanmaCount"];
         normalized["birdOnHeadSeconds"] = stats.birdOnHeadSeconds / data.maxValues["birdOnHeadSeconds"];
         normalized["vantOnHeadSeconds"] = stats.vantOnHeadSeconds / data.maxValues["vantOnHeadSeconds"];
-        normalized["employeesSleepingSeconds"] = stats.employeesSleepingSeconds / data.maxValues["employeesSleepingSeconds"];
+        normalized["employeesSleepingSeconds"] = stats.employeesSleepingSeconds / (4* data.maxValues["employeesSleepingSeconds"]);
         normalized["sitandstandupCount"] = stats.sitandstandupCount / data.maxValues["sitandstandupCount"];
         normalized["mailCount"] = stats.mailCount / data.maxValues["mailCount"];
         normalized["employeeAngerSeconds"] = stats.employeeAngerSeconds / data.maxValues["employeeAngerSeconds"];
