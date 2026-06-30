@@ -6,13 +6,26 @@ using TMPro;
 public class Clock : MonoBehaviour
 {
     public TextMeshProUGUI clockText;
-    public float daySeconds = 120f;
+    public float daySeconds = 10f;
     public float startHour = 9f;
     public float endHour = 17f;
     private bool _dayEnded;
 
     public float passedSeconds;
+    public GameObject stats;
+    public GameObject manualbookbutton;
+    public SpriteRenderer pages;
+    public GameObject outofpages;
 
+    void Start()
+    {
+        Time.timeScale = 1;
+        _dayEnded = false;
+        stats.SetActive(false);
+        manualbookbutton.SetActive(false);
+        pages.enabled = false;
+        outofpages.SetActive(false);
+    }
     void Update()
     {
         if (_dayEnded) return;
@@ -31,6 +44,8 @@ public class Clock : MonoBehaviour
             clockText.text = "17.00";
             Time.timeScale = 0;
             _dayEnded = true;
+            stats.SetActive(true);
+            manualbookbutton.SetActive(true);
             DayStats.instance.PrintStats(); 
             NicknameSystem.instance.DebugPrintEndOfDay(DayStats.instance);
         }
