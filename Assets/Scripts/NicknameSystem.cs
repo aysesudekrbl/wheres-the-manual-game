@@ -79,8 +79,8 @@ public class NicknameSystem : MonoBehaviour
 
     public string ScoreToLevel(float score)
     {
-        if (score <= 0.33) return "LOW";
-        else if (score <= 0.66) return "MID";
+        if (score <= 0.12) return "LOW";
+        else if (score <= 0.50) return "MID";
         else return "HIGH";
     }
 

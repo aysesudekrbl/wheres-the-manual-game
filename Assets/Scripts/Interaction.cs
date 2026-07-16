@@ -30,7 +30,7 @@ public class Interaction : MonoBehaviour
                 }
                 
             }
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetButtonDown("Jump")) // hepsi space olsun şimdilik
             {
                 if (currentInteractable.Group == InteractGroup.Environment){
                     currentInteractable.Interact(transform);

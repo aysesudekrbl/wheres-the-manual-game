@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags:
   - Head
   layers:
@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Employee
-  - 
+  - chairs
   - 
   - 
   - 
@@ -48,3 +48,11 @@ TagManager:
   - name: Others
     uniqueID: 3043690803
     locked: 0
+  - name: fan
+    uniqueID: 3056984871
+    locked: 0
+  - name: page etc
+    uniqueID: 307022439
+    locked: 0
+  m_RenderingLayers:
+  - Default

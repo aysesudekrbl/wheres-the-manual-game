@@ -1,10 +1,61 @@
 fileFormatVersion: 2
-guid: 19a1d2ac2c7d14788818d112dc681d68
+guid: 26409377be8184928be55cf8b66ebea5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5708598185416503073
-    second: sandalye2_0
+      213: 6746097570144395065
+    second: tutorialbuttont_0
+  - first:
+      213: 4858122567398569253
+    second: tutorialbuttont_1
+  - first:
+      213: 461772971957275012
+    second: tutorialbuttont_2
+  - first:
+      213: 8469406658597993232
+    second: tutorialbuttont_3
+  - first:
+      213: 7625008668707302343
+    second: tutorialbuttont_4
+  - first:
+      213: 1452111853464559111
+    second: tutorialbuttont_5
+  - first:
+      213: -950995822926456722
+    second: tutorialbuttont_6
+  - first:
+      213: -7073840061897641097
+    second: tutorialbuttont_7
+  - first:
+      213: -6851656911157350686
+    second: tutorialbuttont_8
+  - first:
+      213: 349922489900421420
+    second: tutorialbuttont_9
+  - first:
+      213: -1277595941083885405
+    second: tutorialbuttont_10
+  - first:
+      213: -4400731920465122549
+    second: tutorialbuttont_11
+  - first:
+      213: 3729440716727945199
+    second: tutorialbuttont_12
+  - first:
+      213: 2733008688171233623
+    second: tutorialbuttont_13
+  - first:
+      213: 413563255413083714
+    second: tutorialbuttont_14
+  - first:
+      213: 5863296343081167772
+    second: tutorialbuttont_15
+  - first:
+      213: 7715657664018703775
+    second: tutorialbuttont_16
+  - first:
+      213: 1246001151718838473
+    second: tutorialbuttont_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,11 +97,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5684591, y: 0.6488675}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -113,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sandalye2_0
+      name: tutorialbuttont_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
-        height: 33
+        width: 93
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +179,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd05fc0223cf6c0b0800000000000000
-      internalID: -5708598185416503073
+      spriteID: 93f15986ff3fe9d50800000000000000
+      internalID: 6746097570144395065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorialbuttont_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 93
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525b9115cb48b6340800000000000000
+      internalID: 4858122567398569253
       vertices: []
       indices: 
       edges: []
@@ -138,17 +211,20 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: c343d41d7cb754cfc843e02799fa8bc7
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":93.0,"y":25.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      sandalye2_0: -5708598185416503073
+      tutorialbuttont_0: 6746097570144395065
+      tutorialbuttont_1: 4858122567398569253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

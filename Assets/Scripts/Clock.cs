@@ -47,7 +47,6 @@ public class Clock : MonoBehaviour
             stats.SetActive(true);
             manualbookbutton.SetActive(true);
             DayStats.instance.PrintStats(); 
-            NicknameSystem.instance.DebugPrintEndOfDay(DayStats.instance);
         }
         
         else{

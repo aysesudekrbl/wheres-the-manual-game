@@ -10,9 +10,9 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadSceneAsync("OfficeScene");
     }
 
-    public void OpenSettings()
+    public void OpenTutorial()
     {
-        SceneManager.LoadSceneAsync("Settings");
+        SceneManager.LoadSceneAsync("Tutorial");
     }
 
     public void ReturnMainMenu()

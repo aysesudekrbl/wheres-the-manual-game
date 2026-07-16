@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PrinterController : MonoBehaviour, IInteractable,IWorkStation
 {
+    
     public float inkTime = 15f;
     private float waitTime;
     public bool outOfInk = false;

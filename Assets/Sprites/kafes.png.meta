@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 19a1d2ac2c7d14788818d112dc681d68
+guid: da7e0ff217d9b48d48fae4b58133ef13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5708598185416503073
-    second: sandalye2_0
+      213: -2275258079943083824
+    second: kafes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,9 +49,9 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5684591, y: 0.6488675}
-  spritePixelsToUnits: 16
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sandalye2_0
+      name: kafes_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 26
-        height: 33
+        width: 50
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd05fc0223cf6c0b0800000000000000
-      internalID: -5708598185416503073
+      spriteID: 0d8b7a4c4d8ac60e0800000000000000
+      internalID: -2275258079943083824
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sandalye2_0: -5708598185416503073
+      kafes_0: -2275258079943083824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

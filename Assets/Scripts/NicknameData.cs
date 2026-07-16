@@ -47,7 +47,7 @@ public class NicknameData : ScriptableObject
         { "employeesSleepingSeconds", 120f },
         { "sitandstandupCount",       6f },
         { "mailCount",                6f },
-        { "employeeAngerSeconds",     40f },
+        { "employeeAngerSeconds",     120f },
     };
 
     // 27 LAKAP TABLOSU
